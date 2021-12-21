@@ -53,12 +53,9 @@ const actions = {
     //recebe os paramentos de user (email, password)
     // OQUE É CONTEXT (ainda não entendi muito bem)????
     login(context, {email, password}){
-        // OQUE É ACCESSTOKEN E PQ ELE RECEBE O EMAIL E SENHA????
         return JwtToken.accessToken(email, password)
             .then(response => {
-                // SETA O ESTADO DO USER COMO AUTENTICADO
                 context.commit('authenticated');
-                // SETA O SESSIONSTORAGE DO USER
                 context.dispatch('getUser');
             return response;
         })
