@@ -27,7 +27,6 @@ const mutations = {
             state.times[index] = time;
         }
     },
-    //2X A MESMA COISA???
     setUser(state,user){
         SessionStorage.setObject('user', user);
         state.auth.user = user;
@@ -60,8 +59,7 @@ const actions = {
             return response;
         })
     },
-    
-    //explicar
+   
     getUser(context){
         User.query().then(response => {
             context.commit('setUser', response.data.user);

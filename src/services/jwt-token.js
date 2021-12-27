@@ -6,6 +6,8 @@
 //importar o arquivo que faz o controle da sessão com informação do token
 import SessionStorage from './session-storage';
 
+
+
 //importar a class que faz o controle da biblioteca JWT
 import {Jwt} from './resources';
 
